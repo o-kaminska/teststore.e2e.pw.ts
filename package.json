@@ -16,12 +16,15 @@
   },
   "homepage": "https://github.com/o-kaminska/teststore.e2e.pw.ts#readme",
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.14",
-    "@eslint/js": "^9.19.0",
     "eslint": "^9.19.0",
     "eslint-plugin-playwright": "^2.2.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.22.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.7.0"
   }
 }
