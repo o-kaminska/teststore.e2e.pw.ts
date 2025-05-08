@@ -24,10 +24,6 @@ export class CreateAccountPage extends BasePage {
     await this.navigateTo("?controller=registration");
   }
 
-  getFieldLocatorByFieldId(name: string) {
-    return this.page.locator(`[id='field-${name}']`);
-  }
-
   get firstName() {
     return this.getFieldLocatorByFieldId("firstname");
   }

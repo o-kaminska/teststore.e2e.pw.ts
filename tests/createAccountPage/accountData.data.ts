@@ -1,10 +1,10 @@
-import { faker } from "@faker-js/faker";
+import { faker, Sex } from "@faker-js/faker";
 
 export const accountData = [
   {
     id: "user - 1",
     gender: "Mr",
-    firstName: faker.person.firstName(),
+    firstName: faker.person.firstName("male"),
     lastName: faker.person.lastName(),
     email: faker.internet.email(),
     password: faker.internet.password(),
@@ -13,7 +13,7 @@ export const accountData = [
   {
     id: "user - 2",
     gender: "Mrs",
-    firstName: faker.person.firstName(),
+    firstName: faker.person.firstName("female"),
     lastName: faker.person.lastName(),
     email: faker.internet.email(),
     password: faker.internet.password(),
