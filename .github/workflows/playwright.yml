@@ -9,6 +9,9 @@ on:
     - cron: "* 4 * * *"
 jobs:
   test:
+    env:
+      EMAIL: ${{vars.EMAIL}}
+      PASSWORD: ${{vars.PASSWORD}}
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
