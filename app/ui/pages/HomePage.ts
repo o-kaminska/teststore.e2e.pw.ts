@@ -14,4 +14,16 @@ export class HomePage extends BasePage {
     await this.navigateTo("");
     await this.headerNavigation.clickOnSignIn();
   }
+
+  get signOut() {
+    return this.headerNavigation.signOut;
+  }
+
+  async clickOnSignOut() {
+    await this.signOut.click();
+  }
+
+  get accountName() {
+    return this.page.locator(".account span").innerText();
+  }
 }
