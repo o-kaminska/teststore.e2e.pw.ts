@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     env:
+      URL: ${{vars.URL}}
       EMAIL: ${{vars.EMAIL}}
       PASSWORD: ${{vars.PASSWORD}}
     timeout-minutes: 60
