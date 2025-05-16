@@ -1,7 +1,7 @@
 import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
-type AccountData = {
+export type AccountData = {
   gender: string;
   firstName: string;
   lastName: string;
