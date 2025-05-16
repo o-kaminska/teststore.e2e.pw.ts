@@ -5,8 +5,8 @@ on:
   # pull_request:
   #   branches: [ main, master ]
   workflow_dispatch:
-  schedule:
-    - cron: "* 4 * * *"
+  # schedule:
+  #   - cron: "* 4 * * *"
 jobs:
   test:
     env:
