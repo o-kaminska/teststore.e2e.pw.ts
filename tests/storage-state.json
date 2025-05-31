@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "PrestaShop-bd73d297b14c5070734013be8110710b",
+      "value": "def50200e965d5bb1ba1deb26fd02412bf911bcd5b8cb71b4525d4a584ad30026555444e9a0cc0ff6200296c24bc87c31b4e97b5924e834f5a17374e83190bb42935f101d480235622392c1b5a8e9543486928e841557484b7c15683adba0915392f2401f5095513edc04cc79f5a652e6972abd46eebb34f587b19444174270bc5549036a12478a2f51ed6f7e993b2f09d1156220f698d2443322552b216dd11aa26e1c5d3ee6f413a9a804087c052f644515aa831880ce4bd4fc23a49bb14923b38974b0f25cf56071360f4f3d6d334239fee7fdf3910c99036ae8a41b939d0ed04c115d9ead72cd96fd838b0aa59e1f9078598dd98746faa4c280f918139a022bc3751ca91e8f3877c5ec49cb46e7cbb746ca8cbf93333e4ec61c16690ff8aae0c4740af4fef752880fb2c5fb02db7e098e3633fdf7b7407d14258c8271f7fe5fa4ef1f5d3a7759f395fc20b7805cc03f4ae88dda1e82f14033234463ac3894ca0872887d0e36f5cb8e1fc2e23f0e01aa66c15eee3fd31e657ecf3d590f95d5e62a154d4cc14e8e7b972dcca596cf6caffc4f19875656fb58ef21049d34977efbbea1d9181f6209d1e7824111a676ffceb48955fb0005dc3977826c5790ea651ac9d00cb36347924fa21930df95d922308232dbbe92855e03ddceedb0452c873ff844f0a6cf5",
+      "domain": ".teststore.automationtesting.co.uk",
+      "path": "/",
+      "expires": 1750402523.745,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ajs_anonymous_id",
+      "value": "ff1a40c0-cf36-431f-b81f-8ea4367efc1a",
+      "domain": "teststore.automationtesting.co.uk",
+      "path": "/",
+      "expires": 1748678123.745,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "2e4d0cf719aacf82adad71360f9dec69",
+      "domain": "teststore.automationtesting.co.uk",
+      "path": "/",
+      "expires": 3499077046.745,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

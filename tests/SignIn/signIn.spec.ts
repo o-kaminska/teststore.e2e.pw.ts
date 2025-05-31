@@ -1,5 +1,5 @@
-import { test } from "../fixtures/page.fixture";
-import { expect } from "@playwright/test";
+import { test, expect } from "../../app/fixtures/page.fixture";
+test.use({ isAuthenticated: false });
 
 test("SI-1 - Sign in as registered user successful flow", async ({
   homePage,

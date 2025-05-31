@@ -3,13 +3,14 @@ import { BasePage } from "./BasePage";
 import { CartSummaryComponent } from "../components/CartSummaryComponent";
 
 export class CartPage extends BasePage {
-  productName: Locator;
+   productName: Locator;
   productCount: Locator;
   increaseProductQuantityButton: Locator;
   cartSummaryComponent: CartSummaryComponent;
   productsPrice: Locator;
   decreaseProductQuantityButton: Locator;
   noItemsMessage: Locator;
+  deleteIcon: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -24,10 +25,15 @@ export class CartPage extends BasePage {
     this.productsPrice = this.page.locator(
       ".product-line-grid-right .product-price > strong"
     );
+    this.deleteIcon = this.page.locator(".remove-from-cart");
     this.noItemsMessage = this.page.locator(".no-items");
+
     this.cartSummaryComponent = new CartSummaryComponent(page);
   }
 
+  async navigateToCartPage() {
+    await this.navigateTo("/index.php?controller=cart");
+  }
   async getCartPageTitle() {
     return this.getPageTitle();
   }
@@ -72,7 +78,7 @@ export class CartPage extends BasePage {
     return totalPrice;
   }
 
-  async getMessageText() {
-    return this.noItemsMessage.innerText();
+  async clickOnDeleteItem() {
+    return this.deleteIcon.click();
   }
 }

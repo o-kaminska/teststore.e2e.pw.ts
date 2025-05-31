@@ -1,10 +1,10 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export class CartSummaryComponent {
   page: Page;
-  proceedToCheckoutButton: any;
-  totalItems: any;
-  itemsPrice: any;
+  proceedToCheckoutButton: Locator;
+  totalItems: Locator;
+  itemsPrice: Locator;
   constructor(page: Page) {
     this.page = page;
     this.proceedToCheckoutButton = this.page.locator(

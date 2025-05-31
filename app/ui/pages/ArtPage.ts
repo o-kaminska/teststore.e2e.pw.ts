@@ -3,7 +3,7 @@ import { BasePage } from "./BasePage";
 import { SubcategoriesComponent } from "../components/SubcategoriesComponent";
 import { FilterComponent } from "../components/FilterComponent";
 
-export class AccessoriesPage extends BasePage {
+export class ArtPage extends BasePage {
   subcategories: SubcategoriesComponent;
   filterComponent: FilterComponent;
   constructor(page: Page) {

@@ -1,10 +1,12 @@
-import { test } from "../fixtures/page.fixture";
-import { expect } from "@playwright/test";
+import { test, expect } from "../../app/fixtures/page.fixture";
+test.use({ isAuthenticated: false });
+
 import { accountData } from "./accountData.data";
 
 test.beforeEach(
   "Navigate to SignIn link and click on Create new account",
-  async ({ homePage, signInPage }) => {
+  async ({ homePage, signInPage, page }) => {
+    await page.goto("");
     await homePage.navigateToSignInPage();
     await signInPage.clickOnCreateNewAccount();
   }

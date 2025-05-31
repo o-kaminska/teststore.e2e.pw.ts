@@ -5,14 +5,20 @@ export class HeaderTopMenuComponent extends HeaderComponent {
   clothesCategory: Locator;
   accessoriesCategory: Locator;
   artCategory: Locator;
+  searchInput: Locator;
 
   constructor(page: Page) {
     super(page);
     this.clothesCategory = this.page.locator("//li[@id ='category-3']/a");
     this.accessoriesCategory = this.page.locator("//li[@id ='category-6']/a");
     this.artCategory = this.page.locator("//li[@id ='category-9']/a");
+    this.searchInput = this.page.locator("//input[@aria-label='Search']");
   }
 
+  async enterSearchValue(value: string) {
+    await this.searchInput.pressSequentially(value);
+    await this.searchInput.press("Enter");
+  }
   async clickOnClothesCategory() {
     await this.clothesCategory.click();
   }
