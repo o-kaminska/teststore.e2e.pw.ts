@@ -4,12 +4,14 @@ export class FilterComponent {
   page: Page;
   clearAllButton: Locator;
   activeFilters: Locator;
+  activeFilterTitle: Locator;
   constructor(page: Page) {
     this.page = page;
     this.clearAllButton = this.page.locator(
       '//button[contains(@class, "js-search-filters-clear-all")]'
     );
     this.activeFilters = this.page.locator(".filter-block");
+    this.activeFilterTitle = this.page.locator(".active-filter-title");
   }
 
   async getOptionsLocatorsByFilterName(filterName: string) {
@@ -41,7 +43,6 @@ export class FilterComponent {
     await this.clearAllButton.click();
   }
 
-  async getActiveFiltersText() {}
   async isSelectedFiltersInActiveList(filterName: string | string[]) {
     const activeFilterNames = await this.activeFilters.allInnerTexts();
 
@@ -51,8 +52,8 @@ export class FilterComponent {
 
       expect(activeFilterNames[0]).toContain(filterName);
     } else if (Array.isArray(filterName)) {
-      for (const filter of filterName) {
-        expect(activeFilterNames).toContain(filter);
+      for (const filter of activeFilterNames) {
+        expect(filter).toContain(filterName);
       }
     }
   }

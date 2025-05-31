@@ -22,9 +22,6 @@ test("Correct results shown when applying 2", async ({
   await accessoriesPage.filterComponent.isSelectedFiltersInActiveList(
     filterName
   );
-  //   console.log(result);
-
-  //   expect(result).toBeTruthy();
 });
 
 test("Clear filters - all selected filters are removed", async ({
@@ -45,9 +42,6 @@ test("Clear filters - all selected filters are removed", async ({
     filterName[1],
     optionNumber[1]
   );
-  //   await artPage.filterComponent.clearAllFilters();
-  const result = await artPage.filterComponent.isSelectedFiltersInActiveList(
-    filterName
-  );
-  // expect(result).toBeFalsy();
+  await artPage.filterComponent.clearAllFilters();
+  await expect(artPage.filterComponent.activeFilterTitle).not.toBeVisible();
 });
