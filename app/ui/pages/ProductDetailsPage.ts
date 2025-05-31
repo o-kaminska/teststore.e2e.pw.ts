@@ -15,6 +15,6 @@ export class ProductDetailsPage extends BasePage {
   }
 
   async clickAddToCart() {
-    await this.addToCartButton.click();
+    await this.addToCartButton.click({ delay: 5000 });
   }
 }
