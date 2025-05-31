@@ -20,5 +20,6 @@ export async function purchaseOneProductByName(
   await clothesPage.subcategories.clickOnSubcategoryByName(subcategoryName);
   await subcategoryPage.clickOnProduct(productName);
   await productDetailsPage.clickAddToCart();
+  await productDetailsPage.addedProductOverview.modalHeader.waitFor();
   await productDetailsPage.addedProductOverview.clickProceedToCheckout();
 }

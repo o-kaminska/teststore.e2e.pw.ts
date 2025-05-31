@@ -1,14 +1,22 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
+import { purchaseOneProductByName } from "./purchaseProduct.helper";
 
 test("Remove item from cart - cart should be empty", async ({
   cartPage,
-  cartController,
+  page,
 }) => {
   const expectedText = "There are no more items in your cart";
+  const categoryName = "Accessories";
+  const subcategoryName = "Home Accessories";
+  const productName = "Mug Today is a good day";
 
-  await cartController.addProductToCart(16, 1);
+  await purchaseOneProductByName(
+    categoryName,
+    subcategoryName,
+    productName,
+    page
+  );
 
-  await cartPage.navigateToCartPage();
   await cartPage.clickOnDeleteItem();
 
   await expect(cartPage.noItemsMessage).toContainText(expectedText);

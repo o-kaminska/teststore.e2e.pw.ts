@@ -1,9 +1,10 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export class AddedProductOverviewModal {
   page: Page;
-  proceedToCheckoutBtnModal: any;
-  continueShoppingButton: any;
+  proceedToCheckoutBtnModal: Locator;
+  continueShoppingButton: Locator;
+  modalHeader: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -13,6 +14,7 @@ export class AddedProductOverviewModal {
     this.continueShoppingButton = this.page.locator(
       '//button[contains(text(), "Continue shopping")]'
     );
+    this.modalHeader = this.page.locator("#myModalLabel");
   }
 
   async clickProceedToCheckout() {

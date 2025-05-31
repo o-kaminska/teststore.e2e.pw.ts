@@ -6,6 +6,7 @@ test("BC-1 - Add to cart women 1 item successful flow", async ({
   subcategoryPage,
   productDetailsPage,
   cartPage,
+  page,
 }) => {
   const subcategoryName = "Women";
   const productName = "Hummingbird printed sweater";
@@ -15,6 +16,7 @@ test("BC-1 - Add to cart women 1 item successful flow", async ({
   await clothesPage.subcategories.clickOnSubcategoryByName(subcategoryName);
   await subcategoryPage.clickOnProduct(productName);
   await productDetailsPage.clickAddToCart();
+  page.waitForTimeout(5000);
   await productDetailsPage.addedProductOverview.clickProceedToCheckout();
 
   const title = await cartPage.getCartPageTitle();
