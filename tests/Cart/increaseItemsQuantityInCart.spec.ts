@@ -23,6 +23,9 @@ test("BC-2 - Quantity of products in the cart can be increased by 3", async ({
   );
 
   const calculatedProductsPrice = await cartPage.calculateTotalProductsPrice();
+  await expect(cartPage.cartSummaryComponent.itemsPrice).not.toHaveText("", {
+    timeout: 10000,
+  });
 
   expect(cartPage.cartSummaryComponent.itemsPrice).toContainText(
     `${calculatedProductsPrice}`

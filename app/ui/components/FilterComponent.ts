@@ -27,6 +27,9 @@ export class FilterComponent {
     const options = await this.getOptionsLocatorsByFilterName(filterName);
     const optionsCount = await options.count();
 
+    console.log(options);
+    console.log(optionsCount);
+
     if (optionsCount === 0) {
       throw new Error(`No filter options found for filter ${filterName}`);
     } else if (optionsCount !== 1) {

@@ -10,6 +10,7 @@ test("Correct results shown when applying 2", async ({
 
   await homePage.navigateToHomePage();
   await homePage.headerTopMenu.clickOnCategoryByName(categoryName);
+  await expect(accessoriesPage.pageHeader).toBeVisible({ timeout: 10000 });
   await accessoriesPage.filterComponent.selectOptionByFilterNameAndOptionNumber(
     filterName,
     optionNumber
