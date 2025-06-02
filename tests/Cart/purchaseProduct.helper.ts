@@ -20,9 +20,9 @@ export async function purchaseOneProductByName(
   await clothesPage.subcategories.clickOnSubcategoryByName(subcategoryName);
   await subcategoryPage.clickOnProduct(productName);
   await productDetailsPage.clickAddToCart();
-  // await expect(productDetailsPage.addedProductOverview.modalHeader).toBeVisible(
-  //   { timeout: 10000 }
-  // );
+  await expect(productDetailsPage.addedProductOverview.modalHeader).toBeVisible(
+    { timeout: 10000 }
+  );
   await expect(
     productDetailsPage.addedProductOverview.proceedToCheckoutBtnModal
   ).toBeVisible({ timeout: 10000 });
