@@ -2,8 +2,9 @@ import { Locator, Page, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class SearchResultsPage extends BasePage {
-  productTitles: Locator;
-  noMatchesMessage: Locator;
+  private productTitles: Locator;
+  private noMatchesMessage: Locator;
+
   constructor(page: Page) {
     super(page);
     this.noMatchesMessage = this.page.locator("#product-search-no-matches");

@@ -2,9 +2,9 @@ import { Page, Locator } from "@playwright/test";
 import { HeaderComponent } from "./HeaderComponent";
 
 export class HeaderNavigationComponent extends HeaderComponent {
-  signIn: Locator;
-  signOut: Locator;
-  accountName: Locator;
+  private signIn: Locator;
+  readonly signOut: Locator;
+  private accountName: Locator;
 
   constructor(page: Page) {
     super(page);

@@ -1,9 +1,9 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 import { AddedProductOverviewModal } from "../modals/AddedProductOverviewModal";
 
 export class ProductDetailsPage extends BasePage {
-  addToCartButton: any;
+  private addToCartButton: Locator;
   addedProductOverview: AddedProductOverviewModal;
 
   constructor(page: Page) {

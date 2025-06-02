@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { HomePage } from "../../app/ui/pages/HomePage";
 import { ClothesPage } from "../../app/ui/pages/ClothesPage";
 import { SubcategoryPage } from "../../app/ui/pages/SubcategoryPage";
@@ -20,5 +20,11 @@ export async function purchaseOneProductByName(
   await clothesPage.subcategories.clickOnSubcategoryByName(subcategoryName);
   await subcategoryPage.clickOnProduct(productName);
   await productDetailsPage.clickAddToCart();
+  await expect(productDetailsPage.addedProductOverview.modalHeader).toBeVisible(
+    { timeout: 10000 }
+  );
+  await expect(
+    productDetailsPage.addedProductOverview.proceedToCheckoutBtnModal
+  ).toBeVisible({ timeout: 10000 });
   await productDetailsPage.addedProductOverview.clickProceedToCheckout();
 }

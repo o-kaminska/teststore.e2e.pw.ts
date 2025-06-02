@@ -1,12 +1,13 @@
 import { Locator, Page } from "@playwright/test";
+import { BaseComponent } from "./BaseComponent";
 
-export class CartSummaryComponent {
-  page: Page;
-  proceedToCheckoutButton: Locator;
-  totalItems: Locator;
-  itemsPrice: Locator;
+export class CartSummaryComponent extends BaseComponent {
+  readonly proceedToCheckoutButton: Locator;
+  private totalItems: Locator;
+  private itemsPrice: Locator;
+
   constructor(page: Page) {
-    this.page = page;
+    super(page);
     this.proceedToCheckoutButton = this.page.locator(
       '//a[text()="Proceed to checkout"]'
     );

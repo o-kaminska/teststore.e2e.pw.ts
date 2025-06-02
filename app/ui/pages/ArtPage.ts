@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 import { SubcategoriesComponent } from "../components/SubcategoriesComponent";
 import { FilterComponent } from "../components/FilterComponent";
@@ -6,6 +6,7 @@ import { FilterComponent } from "../components/FilterComponent";
 export class ArtPage extends BasePage {
   subcategories: SubcategoriesComponent;
   filterComponent: FilterComponent;
+
   constructor(page: Page) {
     super(page);
     this.subcategories = new SubcategoriesComponent(page);

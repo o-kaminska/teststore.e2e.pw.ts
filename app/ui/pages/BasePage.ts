@@ -1,8 +1,8 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export abstract class BasePage {
   protected page: Page;
-  protected pageTitle: any;
+  protected pageTitle: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -17,7 +17,11 @@ export abstract class BasePage {
     return this.page.locator(`[id='field-${name}']`);
   }
 
-  protected async getPageTitle() {
+  protected async getPageTitleText() {
     return this.pageTitle.innerText();
+  }
+
+  get pageHeader() {
+    return this.pageTitle;
   }
 }

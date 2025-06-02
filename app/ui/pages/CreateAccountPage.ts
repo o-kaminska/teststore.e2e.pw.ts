@@ -11,8 +11,8 @@ export type AccountData = {
 };
 
 export class CreateAccountPage extends BasePage {
-  saveButton: Locator;
-  agreeTermConditionCheckbox: Locator;
+  private saveButton: Locator;
+  private agreeTermConditionCheckbox: Locator;
 
   constructor(page: Page) {
     super(page);

@@ -2,10 +2,10 @@ import { Locator, Page } from "@playwright/test";
 import { HeaderComponent } from "./HeaderComponent";
 
 export class HeaderTopMenuComponent extends HeaderComponent {
-  clothesCategory: Locator;
-  accessoriesCategory: Locator;
-  artCategory: Locator;
-  searchInput: Locator;
+  private clothesCategory: Locator;
+  private accessoriesCategory: Locator;
+  private artCategory: Locator;
+  private searchInput: Locator;
 
   constructor(page: Page) {
     super(page);

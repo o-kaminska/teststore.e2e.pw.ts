@@ -11,6 +11,7 @@ test("Correct results shown when applying 2", async ({
   await homePage.navigateToHomePage();
   await homePage.headerTopMenu.clickOnCategoryByName(categoryName);
   await expect(accessoriesPage.pageHeader).toBeVisible({ timeout: 10000 });
+
   await accessoriesPage.filterComponent.selectOptionByFilterNameAndOptionNumber(
     filterName,
     optionNumber
@@ -35,6 +36,8 @@ test("Clear filters - all selected filters are removed", async ({
 
   await homePage.navigateToHomePage();
   await homePage.headerTopMenu.clickOnCategoryByName(categoryName);
+  await expect(artPage.pageHeader).toBeVisible({ timeout: 10000 });
+
   await artPage.filterComponent.selectOptionByFilterNameAndOptionNumber(
     filterName[0],
     optionNumber[0]
@@ -43,6 +46,7 @@ test("Clear filters - all selected filters are removed", async ({
     filterName[1],
     optionNumber[1]
   );
+
   await artPage.filterComponent.clearAllFilters();
   await expect(artPage.filterComponent.activeFilterTitle).not.toBeVisible();
 });

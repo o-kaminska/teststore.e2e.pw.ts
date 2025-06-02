@@ -1,10 +1,10 @@
 import { Locator, Page } from "@playwright/test";
 
 export class AddedProductOverviewModal {
-  page: Page;
-  proceedToCheckoutBtnModal: Locator;
-  continueShoppingButton: Locator;
-  modalHeader: Locator;
+  private page: Page;
+  readonly proceedToCheckoutBtnModal: Locator;
+  readonly continueShoppingButton: Locator;
+  readonly modalHeader: Locator;
 
   constructor(page: Page) {
     this.page = page;

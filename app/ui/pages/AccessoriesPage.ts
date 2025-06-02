@@ -6,14 +6,13 @@ import { FilterComponent } from "../components/FilterComponent";
 export class AccessoriesPage extends BasePage {
   subcategories: SubcategoriesComponent;
   filterComponent: FilterComponent;
-  pageHeader: Locator;
+
   constructor(page: Page) {
     super(page);
     this.subcategories = new SubcategoriesComponent(page);
     this.filterComponent = new FilterComponent(page);
-    this.pageHeader = this.page.locator("//h1[text()='Accessories']");
   }
   async getAccessoriesTitle() {
-    return this.getPageTitle();
+    return this.getPageTitleText();
   }
 }

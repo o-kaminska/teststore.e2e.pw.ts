@@ -3,14 +3,14 @@ import { BasePage } from "./BasePage";
 import { CartSummaryComponent } from "../components/CartSummaryComponent";
 
 export class CartPage extends BasePage {
-   productName: Locator;
-  productCount: Locator;
-  increaseProductQuantityButton: Locator;
   cartSummaryComponent: CartSummaryComponent;
-  productsPrice: Locator;
-  decreaseProductQuantityButton: Locator;
-  noItemsMessage: Locator;
-  deleteIcon: Locator;
+  private productName: Locator;
+  private productCount: Locator;
+  private increaseProductQuantityButton: Locator;
+  private productsPrice: Locator;
+  private decreaseProductQuantityButton: Locator;
+  private deleteIcon: Locator;
+  readonly noItemsMessage: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -35,7 +35,7 @@ export class CartPage extends BasePage {
     await this.navigateTo("/index.php?controller=cart");
   }
   async getCartPageTitle() {
-    return this.getPageTitle();
+    return this.getPageTitleText();
   }
 
   async getProductName() {

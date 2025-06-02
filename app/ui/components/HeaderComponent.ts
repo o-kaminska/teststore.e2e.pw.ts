@@ -1,9 +1,8 @@
 import { Page } from "@playwright/test";
+import { BaseComponent } from "./BaseComponent";
 
-export class HeaderComponent {
-  protected page: Page;
-
+export class HeaderComponent extends BaseComponent {
   constructor(page: Page) {
-    this.page = page;
+    super(page);
   }
 }

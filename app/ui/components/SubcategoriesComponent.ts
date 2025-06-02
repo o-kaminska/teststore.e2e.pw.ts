@@ -1,9 +1,9 @@
 import { Page } from "@playwright/test";
+import { BaseComponent } from "./BaseComponent";
 
-export class SubcategoriesComponent {
-  protected page: Page;
+export class SubcategoriesComponent extends BaseComponent {
   constructor(page: Page) {
-    this.page = page;
+    super(page);
   }
 
   getSubcategoryLocatorByTitle(title: string) {

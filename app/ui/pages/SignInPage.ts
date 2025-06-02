@@ -7,9 +7,9 @@ type UserDataForSignIn = {
 };
 
 export class SignInPage extends BasePage {
-  createNewAccountLink: Locator;
-  signInButton: Locator;
-  errorMessage: Locator;
+  private createNewAccountLink: Locator;
+  private signInButton: Locator;
+  private errorMessage: Locator;
 
   constructor(page: Page) {
     super(page);

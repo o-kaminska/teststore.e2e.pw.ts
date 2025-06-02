@@ -1,12 +1,13 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { BaseComponent } from "./BaseComponent";
 
-export class FilterComponent {
-  page: Page;
-  clearAllButton: Locator;
-  activeFilters: Locator;
-  activeFilterTitle: Locator;
+export class FilterComponent extends BaseComponent {
+  private clearAllButton: Locator;
+  readonly activeFilters: Locator;
+  readonly activeFilterTitle: Locator;
+
   constructor(page: Page) {
-    this.page = page;
+    super(page);
     this.clearAllButton = this.page.locator(
       '//button[contains(@class, "js-search-filters-clear-all")]'
     );
@@ -26,9 +27,6 @@ export class FilterComponent {
   ) {
     const options = await this.getOptionsLocatorsByFilterName(filterName);
     const optionsCount = await options.count();
-
-    console.log(options);
-    console.log(optionsCount);
 
     if (optionsCount === 0) {
       throw new Error(`No filter options found for filter ${filterName}`);
