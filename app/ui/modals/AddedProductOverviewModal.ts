@@ -18,8 +18,7 @@ export class AddedProductOverviewModal {
   }
 
   async clickProceedToCheckout() {
-    // await this.proceedToCheckoutBtnModal.click({ force: true });
-    await this.proceedToCheckoutBtnModal.click();
+    await this.proceedToCheckoutBtnModal.click({ force: true });
   }
 
   async clickContinueShopping() {
