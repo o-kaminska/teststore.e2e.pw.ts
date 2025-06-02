@@ -13,7 +13,7 @@ test.beforeEach(
 );
 
 for (const data of accountData) {
-  test(`CA-1 - Create new account successful flow by ${data.id}`, async ({
+  test(`TS-1 - Create new account successful flow by ${data.id}`, async ({
     homePage,
     createAccountPage,
   }) => {
@@ -25,7 +25,7 @@ for (const data of accountData) {
   });
 }
 
-test("CA-2 - New account is not created when T&C are not checked", async ({
+test("TS-2 - New account is not created when T&C are not checked", async ({
   createAccountPage,
   homePage,
 }) => {

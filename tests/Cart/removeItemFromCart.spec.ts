@@ -1,7 +1,7 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 import { purchaseOneProductByName } from "./purchaseProduct.helper";
 
-test("Remove item from cart - cart should be empty", async ({
+test("TS-10 - Remove item from cart - cart should be empty", async ({
   cartPage,
   page,
 }) => {

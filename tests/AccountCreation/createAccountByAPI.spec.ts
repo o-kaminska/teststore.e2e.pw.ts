@@ -3,7 +3,7 @@ import { Account } from "../../app/api/types/AccountType";
 import { faker } from "@faker-js/faker";
 
 test.use({ isAuthenticated: false });
-test("CA-3 - Create new account by API", async ({
+test("TS-3 - Create new account by API", async ({
   userController,
   homePage,
   signInPage,

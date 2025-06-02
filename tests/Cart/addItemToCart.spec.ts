@@ -1,6 +1,6 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 
-test("BC-1 - Add to cart women 1 item successful flow", async ({
+test("TS-7 - Add to cart women 1 item successful flow", async ({
   homePage,
   clothesPage,
   subcategoryPage,

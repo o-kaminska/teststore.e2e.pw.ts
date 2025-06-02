@@ -1,6 +1,6 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 
-test("Correct results shown when applying 2", async ({
+test("TS-13 - Correct results shown when applying 2", async ({
   homePage,
   accessoriesPage,
 }) => {
@@ -26,7 +26,7 @@ test("Correct results shown when applying 2", async ({
   );
 });
 
-test("Clear filters - all selected filters are removed", async ({
+test("TS-14 - Clear filters - all selected filters are removed", async ({
   homePage,
   artPage,
 }) => {

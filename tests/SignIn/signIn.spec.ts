@@ -1,7 +1,7 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 test.use({ isAuthenticated: false });
 
-test("SI-1 - Sign in as registered user successful flow", async ({
+test("TS-4 - Sign in as registered user successful flow", async ({
   homePage,
   signInPage,
 }) => {
@@ -14,7 +14,7 @@ test("SI-1 - Sign in as registered user successful flow", async ({
   await expect(homePage.signOut).toBeVisible();
 });
 
-test("SI-2 - Error message 'Authentication failed.' should be shown when entered invalid email", async ({
+test("TS-5 - Error message 'Authentication failed.' should be shown when entered invalid email", async ({
   homePage,
   signInPage,
 }) => {
@@ -29,7 +29,7 @@ test("SI-2 - Error message 'Authentication failed.' should be shown when entered
   expect(await signInPage.getErrorMessageText()).toBe(errorText);
 });
 
-test("SI-3 - Error message 'Authentication failed.' should be shown when entered invalid password", async ({
+test("TS-6 - Error message 'Authentication failed.' should be shown when entered invalid password", async ({
   homePage,
   signInPage,
 }) => {

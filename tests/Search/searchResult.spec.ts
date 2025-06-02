@@ -1,6 +1,6 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 
-test("Search results - displays results that match the search query", async ({
+test("TS-11 - Search results - displays results that match the search query", async ({
   homePage,
   searchResultsPage,
 }) => {
@@ -11,7 +11,7 @@ test("Search results - displays results that match the search query", async ({
   await searchResultsPage.verifyProductTitleIContainsSearchQuery(searchValue);
 });
 
-test("Proper message is shown when nothing matches with search query", async ({
+test("Ts-12 - Proper message is shown when nothing matches with search query", async ({
   homePage,
   searchResultsPage,
 }) => {

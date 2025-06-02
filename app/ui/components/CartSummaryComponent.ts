@@ -3,8 +3,8 @@ import { BaseComponent } from "./BaseComponent";
 
 export class CartSummaryComponent extends BaseComponent {
   readonly proceedToCheckoutButton: Locator;
-  private totalItems: Locator;
-  private itemsPrice: Locator;
+  readonly totalItems: Locator;
+  readonly itemsPrice: Locator;
 
   constructor(page: Page) {
     super(page);

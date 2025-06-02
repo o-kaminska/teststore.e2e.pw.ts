@@ -1,7 +1,7 @@
 import { test, expect } from "../../app/fixtures/page.fixture";
 import { purchaseOneProductByName } from "./purchaseProduct.helper";
 
-test("BC-2 - Quantity of products in the cart can be increased by 3", async ({
+test("TS-8 - Quantity of products in the cart can be increased by 3", async ({
   cartPage,
   page,
 }) => {
@@ -32,7 +32,7 @@ test("BC-2 - Quantity of products in the cart can be increased by 3", async ({
   );
 });
 
-test("BC-3 - Cart should be empty after decreasing product's quantity from 1 to 0", async ({
+test("TS-9 - Cart should be empty after decreasing product's quantity from 1 to 0", async ({
   cartPage,
   page,
 }) => {
